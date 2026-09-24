@@ -6,6 +6,8 @@ lang: hu
 
 website:
   title: "MI – kockázatok és mérés"
+  site-url: "https://abarik.github.io/MI_honlap_01/"
+  repo-url: "https://github.com/abarik/MI_honlap_01"
   description: "Kik figyelmeztettek a mesterséges intelligencia veszélyeire, és milyen eszközökkel mérjük az MI-hez való viszonyunkat?"
   search: true
   page-navigation: true

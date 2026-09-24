@@ -1,0 +1,25 @@
+# A weblap automatikus újraépítése és közzététele a gh-pages ágra.
+# Az R-kódok eredményei a _freeze/ mappában vannak, ezért itt nincs szükség R-re.
+name: Weblap közzététele
+
+on:
+  push:
+    branches: [main, claude/admiring-cannon-oze1kp]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: quarto-dev/quarto-actions/setup@v2
+
+      - uses: quarto-dev/quarto-actions/publish@v2
+        with:
+          target: gh-pages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
