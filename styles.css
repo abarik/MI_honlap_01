@@ -1,0 +1,72 @@
+/* Idővonal a "Figyelmeztetők" oldalon */
+.idovonal {
+  border-left: 3px solid var(--bs-primary, #2780e3);
+  margin: 1.5rem 0 2rem 0.5rem;
+  padding-left: 1.5rem;
+}
+
+.idovonal .esemeny {
+  position: relative;
+  margin-bottom: 1.6rem;
+}
+
+.idovonal .esemeny::before {
+  content: "";
+  position: absolute;
+  left: calc(-1.5rem - 8px);
+  top: 0.35rem;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--bs-body-bg, #fff);
+  border: 3px solid var(--bs-primary, #2780e3);
+}
+
+.idovonal .esemeny.magyar::before {
+  background: #c8102e;
+  border-color: #477050;
+}
+
+.idovonal .ev {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--bs-primary, #2780e3);
+}
+
+.idovonal .esemeny p {
+  margin-bottom: 0.3rem;
+}
+
+.cimke {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 0.05rem 0.5rem;
+  margin-left: 0.3rem;
+  border-radius: 1rem;
+  background: rgba(127, 127, 127, 0.15);
+  vertical-align: middle;
+}
+
+/* Kártyák a kezdőlapon */
+.kartyak {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.kartya {
+  border: 1px solid rgba(127, 127, 127, 0.3);
+  border-radius: 0.6rem;
+  padding: 1rem 1.2rem;
+}
+
+.kartya h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+}
+
+/* Táblázatok tördelése kis képernyőn */
+.table {
+  font-size: 0.9rem;
+}
