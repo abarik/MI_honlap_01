@@ -1,0 +1,236 @@
+---
+title: "MI-vel kapcsolatos mérőeszközök"
+subtitle: "Magyar és nemzetközi skálák, felmérések és indexek"
+---
+
+```{r}
+#| label: setup
+meroeszkozok <- read.csv("data/meroeszkozok.csv", fileEncoding = "UTF-8",
+                         stringsAsFactors = FALSE, check.names = FALSE)
+
+# DOI-ból kattintható hivatkozás
+meroeszkozok$forras <- ifelse(
+  nzchar(meroeszkozok$doi),
+  sprintf("[%s (%s)](https://doi.org/%s)", meroeszkozok$szerzok,
+          meroeszkozok$ev, meroeszkozok$doi),
+  sprintf("%s (%s)", meroeszkozok$szerzok, meroeszkozok$ev)
+)
+
+n_osszes <- nrow(meroeszkozok)
+n_magyar <- sum(startsWith(meroeszkozok$magyar_valtozat, "Igen"))
+```
+
+Az MI társadalmi fogadtatását többféleképpen lehet mérni. Ezen az oldalon
+három csoportot mutatunk be:
+
+1. **Kérdőíves (pszichometriai) skálák** – az egyének attitűdjeit, szorongását,
+   bizalmát és MI-jártasságát mérik.
+2. **Magyar felmérések és adaptációk** – hazai reprezentatív kutatások és a
+   magyarra adaptált skálák.
+3. **Nemzetközi indexek és teljesítménymérők** – országok, szervezetek és maguk
+   az MI-rendszerek mérésére.
+
+## Kérdőíves skálák áttekintése
+
+Az alábbi táblázat `r n_osszes` nemzetközileg elterjedt skálát foglal össze;
+ezek közül jelenleg `r n_magyar` rendelkezik publikált, pszichometriailag
+ellenőrzött magyar változattal. (A táblázat adatai a projekt
+`data/meroeszkozok.csv` fájljából származnak, így új skála egyszerűen, egy
+sor hozzáadásával felvehető.)
+
+```{r}
+#| label: tbl-attekintes
+#| tbl-cap: "Az MI-vel kapcsolatos főbb kérdőíves skálák"
+tabla <- data.frame(
+  "Terület"         = meroeszkozok$kategoria,
+  "Skála"           = sprintf("**%s** – %s", meroeszkozok$rovidites,
+                              meroeszkozok$nev),
+  "Forrás"          = meroeszkozok$forras,
+  "Mit mér?"        = meroeszkozok$mit_mer,
+  "Tételek"         = meroeszkozok$tetelek,
+  "Magyar változat" = meroeszkozok$magyar_valtozat,
+  check.names = FALSE
+)
+knitr::kable(tabla, row.names = FALSE)
+```
+
+::: {.callout-note}
+## Hogyan olvassuk a „Magyar változat" oszlopot?
+A „Nem ismert publikált magyar validálás" azt jelenti, hogy a lap összeállításakor
+(2026. szeptember) nem találtunk lektorált folyóiratban megjelent, pszichometriai
+elemzéssel alátámasztott magyar adaptációt. Ettől még létezhetnek
+kutatásokban használt fordítások. A magyar GAAIS-adaptáció szerzői szerint
+2025-ig ez volt az első hivatalos magyar MI-attitűdskála.
+:::
+
+### Attitűdskálák
+
+**GAAIS – General Attitudes towards Artificial Intelligence Scale**
+(Schepman és Rodway, 2020). A legszélesebb körben használt MI-attitűdskála.
+20 tételből áll, két alskálával: a *pozitív attitűdök* (12 tétel; pl. az MI
+társadalmi és gazdasági hasznának észlelése) és a *negatív attitűdök*
+(8 tétel; pl. az MI-vel kapcsolatos aggodalmak, bizalmatlanság). 2023-ban a
+szerzők további validálást végeztek, és rövidített változatok is megjelentek.
+
+**ATAI – Attitudes Towards Artificial Intelligence Scale**
+(Sindermann és mtsai., 2021). Mindössze 5 tételes, gyorsan felvehető skála két
+dimenzióval: az MI *elfogadása* és az MI-től való *félelem*. Német, kínai és
+angol mintán validálták, ezért kultúrközi összehasonlításokra is alkalmas.
+
+**AIAS-4 – AI Attitude Scale** (Grassini, 2023). Négytételes, egydimenziós
+rövid skála, amely akkor hasznos, ha egy nagyobb kérdőívben kevés hely jut az
+MI-attitűd mérésére.
+
+### Szorongás és érzékelt fenyegetés
+
+**AIAS – Artificial Intelligence Anxiety Scale** (Wang és Wang, 2022). 21 tétel
+négy faktorral: *tanulással kapcsolatos szorongás*, *munkahely elvesztésétől
+való félelem*, *szociotechnikai vakság* (az MI emberi függőségének
+figyelmen kívül hagyása) és *MI-konfigurációval kapcsolatos szorongás*
+(pl. humanoid robotoktól való félelem).
+
+**TAI – Threats of Artificial Intelligence Scale** (Kieslich, Lünich és
+Marcinkowski, 2021). Az MI négy funkcióját (felismerés, előrejelzés, ajánlás,
+döntéshozatal) konkrét alkalmazási területekhez (pl. egészségügy, hitelbírálat,
+munkaerő-felvétel) kapcsolva méri az érzékelt fenyegetést. Kínai adaptációja
+is megjelent.
+
+### MI-jártasság (AI literacy)
+
+Az MI-jártasság azt írja le, mennyire képes valaki megérteni, használni és
+kritikusan értékelni az MI-rendszereket. Az EU MI-rendelete (4. cikk) 2025
+februárjától előírja, hogy az MI-rendszereket alkalmazó szervezetek gondoskodjanak
+munkatársaik megfelelő szintű MI-jártasságáról – ez különösen fontossá teszi a
+mérését.
+
+- **AILS** (Wang, Rau és Yuan, 2023): 12 tétel; *tudatosság, használat, értékelés,
+  etika*.
+- **SNAIL** (Laupichler és mtsai., 2023): 31 tétel laikusoknak; *technikai
+  megértés, kritikus értékelés, gyakorlati alkalmazás*.
+- **MAILS** (Carolus és mtsai., 2023): 34 tétel; a jártasság mellett az MI-vel
+  kapcsolatos önhatékonyságot és önkompetenciát is méri; később rövid változata
+  is készült.
+- **MAIRS-MS** (Karaca és mtsai., 2021): orvostanhallgatók MI-felkészültségét
+  méri – jó példa a szakterület-specifikus skálákra.
+
+::: {.callout-important}
+## Önbevallás vs. tudásteszt
+A fenti skálák többsége **önbevalláson** alapul, vagyis azt méri, mennyire
+*tartja* magát valaki jártasnak. A kutatások szerint ez nem mindig esik egybe a
+tényleges tudással, ezért egyre több **objektív, feladatalapú** MI-jártassági
+teszt is készül.
+:::
+
+### Bizalom és technológiaelfogadás
+
+- **Trust in Automation** (Jian, Bisantz és Drury, 2000): 12 tételes klasszikus
+  skála az automatizált rendszerekbe vetett bizalomról; MI-kutatásokban is
+  gyakran használják.
+- **TAM** (Davis, 1989) és **UTAUT / UTAUT2** (Venkatesh és mtsai., 2003, 2012):
+  általános technológiaelfogadási modellek, amelyeket számos – magyar – kutatás
+  alkalmaz MI-eszközök (pl. ChatGPT) elfogadásának vizsgálatára. Ezek inkább
+  keretmodellek, mint rögzített skálák: a tételeket mindig az adott
+  technológiára szabják.
+
+### Robotokkal kapcsolatos skálák
+
+- **NARS** (Nomura és mtsai., 2006): a robotokkal szembeni negatív attitűdök.
+- **Godspeed** (Bartneck és mtsai., 2009): a robotok észlelése öt dimenzió
+  mentén (antropomorfizmus, élőszerűség, szimpátia, észlelt intelligencia,
+  észlelt biztonság).
+
+## Magyar mérőeszközök és felmérések
+
+### Magyarra adaptált skála: GAAIS-HU
+
+::: {.callout-tip}
+## Rózsa és mtsai. (2025)
+Rózsa S., Bandi Sz., Hartung I., Török I. A., Varga J. É., Somlai E. H.,
+Herold R. és Kállai J. (2025).
+[General Attitudes towards Artificial Intelligence Scale (GAAIS): Hungarian adaptation and links to personality traits](https://doi.org/10.3389/fpsyg.2025.1703750).
+*Frontiers in Psychology*, 16, 1703750.
+:::
+
+- **Minta:** 704 fő (18–60 évesek, átlagéletkor 27,8 év).
+- **Megbízhatóság:** Cronbach-α = 0,85 (pozitív alskála) és 0,81 (negatív alskála).
+- **Főbb eredmények:** a gyakori MI-használat a pozitív, a problémás
+  MI-használat a negatív attitűdökkel jár együtt; a szorongásérzékenység és
+  bizonyos kognitív személyiségjellemzők a negatív attitűdökkel mutatnak
+  kapcsolatot.
+- **Jelentőség:** a szerzők szerint ez az első hivatalos, pszichometriailag
+  ellenőrzött magyar MI-attitűdskála; más nemzetközi skálák (pl. ATAI, AIAS-4)
+  magyar adaptációja még hiányzik.
+
+### Reprezentatív lakossági felmérések
+
+| Felmérés | Készítő | Adatfelvétel | Főbb megállapítások |
+|---|---|---|---|
+| [*A mesterséges intelligenciával kapcsolatos társadalmi attitűdök Magyarországon, 2023 őszén*](https://socio.hu/index.php/so/article/view/1059) | Stefkovics Á., Batiz K., Orbán F., Tariska A., Pavalacs A. – HUN-REN TK (Socio.hu, 2024) | 2023, két reprezentatív telefonos felmérés | A magyarok többségének vegyes, összetett MI-attitűdje van: egyszerre látják az előnyöket és a hátrányokat, és az egyes alkalmazásokat eltérően ítélik meg. |
+| [*Mit gondolnak a magyarok a mesterséges intelligenciáról?*](https://itki.uni-nke.hu/hirek/2025/01/29/mit-gondolnak-a-magyarok-a-mesterseges-intelligenciarol-kutatasi-jelentes) | NKE Információs Társadalom Kutatóintézet (2025) | 2023. nov.–dec., reprezentatív telefonos | 34% használt már generatív MI-t (fiatalok: 58%, 65 év felettiek: 14%); 83% szerint az MI kényelmesebbé teheti az életet, de 50% inkább kihívásként éli meg a változásokat. |
+| [*AI Readiness Index*](https://mediafuture.hu/knowhow/2026/09/11/ai-readiness-index-2026-ai-summit/) | Publicis Groupe Hungary és PwC Magyarország | évente, 2024 óta (internetezők) | Az index értéke 3,9 (2024) → 4,44 (2025) → 5,13 (2026); 2026-ban a magyar internetezők 71%-a használ MI-t a mindennapokban (egy évvel korábban 42%). |
+
+### Szakirodalmi áttekintés magyarul
+
+- Andok Mónika (2025): [Mesterségesintelligencia-jártasság](https://ojs.mtak.hu/index.php/ias/article/view/18449).
+  *Iustum Aequum Salutare*, 2025/3, 43–60. – A médiajártasság és az
+  MI-jártasság viszonyát, az UNESCO felsőoktatási MI-kompetenciakeretét és az
+  MI-jártasság mérésére alkalmas eszközöket tekinti át.
+
+### Hivatalos statisztikák
+
+- **KSH és Eurostat** – a vállalkozások MI-használatáról évente közölnek
+  adatokat (az „IKT-használat a vállalkozásoknál" felmérés keretében), így
+  Magyarország helyzete összevethető az uniós átlaggal.
+- **Magyarország Mesterséges Intelligencia Stratégiája (2025–2030)** – a
+  stratégia célokat és mutatókat rögzít az MI hazai elterjedésére és a
+  kompetenciafejlesztésre.
+
+## Nemzetközi indexek és teljesítménymérők
+
+Nemcsak az emberek MI-hez való viszonyát, hanem az országok felkészültségét és
+maguknak az MI-rendszereknek a képességeit is mérik.
+
+### Ország- és szervezeti szintű indexek
+
+| Index | Készítő | Mit mér? |
+|---|---|---|
+| [AI Index Report](https://hai.stanford.edu/ai-index) | Stanford HAI (évente, 2017 óta) | Kutatás, gazdaság, szabályozás, közvélemény – átfogó MI-trendek |
+| [OECD.AI Policy Observatory](https://oecd.ai/) | OECD | Országos MI-szakpolitikák és -mutatók adatbázisa |
+| [Government AI Readiness Index](https://oxfordinsights.com/ai-readiness/) | Oxford Insights | A kormányzatok felkészültsége az MI közszolgáltatásokban való alkalmazására |
+| [Global Index on Responsible AI](https://www.global-index.ai/) | Global Center on AI Governance | A felelős MI-re vonatkozó állami és társadalmi kötelezettségvállalások |
+| [Eurostat – AI use in enterprises](https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Use_of_artificial_intelligence_in_enterprises) | Eurostat | Az MI-t használó vállalkozások aránya az EU tagállamaiban |
+
+### Az MI-rendszerek teljesítménymérői (benchmarkok)
+
+A benchmarkok nem az emberek véleményét, hanem az MI-modellek képességeit mérik
+szabványos feladatsorokon. A kockázatok szempontjából azért fontosak, mert
+jelzik, milyen gyorsan közelítenek a rendszerek az emberi szakértői szinthez.
+
+- **MMLU** (Hendrycks és mtsai., 2020): 57 tantárgy feleletválasztós kérdései.
+- **SWE-bench** (Jimenez és mtsai., 2023): valódi szoftverhibák javítása.
+- **Humanity's Last Exam** (2025): rendkívül nehéz, szakértők által írt kérdések
+  sokféle tudományterületről.
+- **METR – feladatidő-horizont** (2025): az MI-ügynökök által önállóan
+  elvégezhető feladatok hosszát méri (emberi munkaidőben kifejezve).
+- **Veszélyes képességek vizsgálata**: az MI-biztonsági intézetek (pl. UK AI
+  Security Institute, US CAISI) és a fejlesztők kiber-, biológiai és autonómiával
+  kapcsolatos kockázatokat vizsgáló értékelései.
+
+::: {.callout-warning}
+## A benchmarkok korlátai
+A népszerű benchmarkok gyorsan „telítődnek" (a modellek elérik a maximumot), és
+a tesztfeladatok bekerülhetnek a tanítóadatokba. Ezért az eredményeket mindig
+óvatosan, több mérés együttes figyelembevételével érdemes értelmezni.
+:::
+
+## Hivatkozások
+
+```{r}
+#| label: hivatkozasok
+#| results: asis
+hiv <- meroeszkozok[order(meroeszkozok$szerzok), ]
+cat(sprintf("- %s: *%s* (%s). <https://doi.org/%s>\n",
+            hiv$szerzok, hiv$nev, hiv$ev, hiv$doi), sep = "")
+```
+
+- Rózsa S. és mtsai. (2025). GAAIS: Hungarian adaptation and links to personality traits. *Frontiers in Psychology*, 16, 1703750. <https://doi.org/10.3389/fpsyg.2025.1703750>

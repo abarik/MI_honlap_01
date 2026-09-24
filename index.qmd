@@ -1,0 +1,50 @@
+---
+title: "Mesterséges intelligencia – kockázatok és mérés"
+subtitle: "Figyelmeztetések a kezdetektől napjainkig, valamint az MI-vel kapcsolatos magyar és nemzetközi mérőeszközök"
+toc: false
+---
+
+A mesterséges intelligencia (MI) története nemcsak a technikai áttörések története,
+hanem azoké a figyelmeztetéseké is, amelyeket gondolkodók, kutatók és intézmények
+fogalmaztak meg a lehetséges veszélyekről. Mára az MI a mindennapok része lett,
+ezért egyre fontosabb az is, hogy **mérni tudjuk**, hogyan viszonyulnak hozzá az
+emberek: mennyire bíznak benne, mennyire félnek tőle, és mennyire értenek hozzá.
+
+Ez a weblap két fő témát dolgoz fel:
+
+::: {.kartyak}
+
+::: {.kartya}
+### ⚠️ [Figyelmeztetők](veszelyek.qmd)
+
+Kik és mikor hívták fel a figyelmet az MI veszélyeire? Idővonal Samuel Butler
+1863-as írásától Neumann János és Alan Turing gondolatain át a 2020-as évek
+nyílt leveleiig és nemzetközi jelentéseiig – a magyar vonatkozások kiemelésével.
+:::
+
+::: {.kartya}
+### 📏 [Mérőeszközök](meroeszkozok.qmd)
+
+Kérdőíves skálák az MI-vel kapcsolatos attitűdök, szorongás, bizalom és
+MI-jártasság mérésére; magyar adaptációk és hazai felmérések; nemzetközi
+indexek és teljesítménymérők (benchmarkok).
+:::
+
+:::
+
+## Miért fontos ez?
+
+- **A kockázatok nem újkeletűek.** Sok mai aggodalom – az irányítás elvesztése,
+  a munkahelyek átalakulása, az automatizált döntések igazságtalansága – már
+  évtizedekkel ezelőtt megfogalmazódott.
+- **A társadalmi fogadtatás mérhető.** Validált mérőeszközök nélkül nem tudjuk
+  összehasonlítani a csoportokat, országokat és az időbeli változásokat.
+- **A magyar kontextus sajátos.** Hazánkban is készülnek reprezentatív felmérések,
+  és megjelentek az első magyarra adaptált, pszichometriailag ellenőrzött skálák.
+
+::: {.callout-note}
+## Frissítés
+A tartalom állapota: **2026. szeptember**. Az MI területe gyorsan változik, ezért a
+lap tartalmát érdemes rendszeresen frissíteni. A frissítés módját
+[A projektről](projekt.qmd) oldal írja le.
+:::

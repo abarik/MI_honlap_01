@@ -1,0 +1,63 @@
+---
+title: "A projektről"
+---
+
+Ez a weblap egy [Quarto](https://quarto.org/) alapú weboldal, amely
+**RStudio-projektként** szerkeszthető és építhető.
+
+## Felépítés
+
+| Fájl / mappa | Szerepe |
+|---|---|
+| `MI_honlap_01.Rproj` | RStudio-projektfájl – ezzel nyitható meg a projekt |
+| `_quarto.yml` | A weboldal beállításai (menü, téma, lábléc) |
+| `index.qmd` | Kezdőlap |
+| `veszelyek.qmd` | Idővonal: kik figyelmeztettek az MI veszélyeire |
+| `meroeszkozok.qmd` | Magyar és nemzetközi mérőeszközök |
+| `projekt.qmd` | Ez az oldal |
+| `data/meroeszkozok.csv` | A mérőeszköz-táblázat adatai (R kód olvassa be) |
+| `styles.css` | Egyedi stílusok (idővonal, kártyák) |
+| `_freeze/` | Az R-kódok mentett eredményei (így az oldal R nélkül is újraépíthető) |
+
+## Szükséges programok
+
+- [R](https://cran.r-project.org/) (4.1 vagy újabb) és [RStudio](https://posit.co/download/rstudio-desktop/)
+- [Quarto](https://quarto.org/docs/get-started/) (az újabb RStudio-verziók tartalmazzák)
+- R-csomagok: `knitr`, `rmarkdown`
+
+```r
+install.packages(c("knitr", "rmarkdown"))
+```
+
+## A weblap építése
+
+1. Nyisd meg a `MI_honlap_01.Rproj` fájlt RStudióban.
+2. A **Build** panelen kattints a **Render Website** gombra
+   (vagy a terminálban: `quarto render`).
+3. Az elkészült weblap a `_site/` mappába kerül; az `index.html` böngészőben
+   megnyitható.
+
+Élő előnézethez: `quarto preview` (a mentett módosítások azonnal megjelennek).
+
+## Tartalom bővítése
+
+- **Új mérőeszköz:** adj egy új sort a `data/meroeszkozok.csv` fájlhoz
+  (UTF-8 kódolással), majd építsd újra az oldalt – a táblázat és a
+  hivatkozáslista automatikusan frissül.
+- **Új esemény az idővonalon:** a `veszelyek.qmd` megfelelő korszakába másolj be
+  egy blokkot az alábbi mintára (magyar vonatkozásnál használd a
+  `{.esemeny .magyar}` osztályt):
+
+```markdown
+::: {.esemeny}
+[2026]{.ev} **Szerző neve** – *A mű címe* [címke]{.cimke}
+
+Rövid leírás arról, mire hívta fel a figyelmet.
+:::
+```
+
+## Közzététel
+
+A `_site/` mappa tartalma bármilyen statikus tárhelyre feltölthető. Kényelmes
+megoldás a GitHub Pages: `quarto publish gh-pages`, vagy a Quarto Pub:
+`quarto publish quarto-pub`.

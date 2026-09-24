@@ -1,0 +1,44 @@
+project:
+  type: website
+  output-dir: _site
+
+lang: hu
+
+website:
+  title: "MI – kockázatok és mérés"
+  description: "Kik figyelmeztettek a mesterséges intelligencia veszélyeire, és milyen eszközökkel mérjük az MI-hez való viszonyunkat?"
+  search: true
+  page-navigation: true
+  navbar:
+    left:
+      - href: index.qmd
+        text: Kezdőlap
+      - href: veszelyek.qmd
+        text: Figyelmeztetők
+      - href: meroeszkozok.qmd
+        text: Mérőeszközök
+      - href: projekt.qmd
+        text: A projektről
+  page-footer:
+    center: "MI – kockázatok és mérés · Quarto-alapú weblap · 2026"
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    css: styles.css
+    toc: true
+    toc-title: "Tartalom"
+    toc-depth: 3
+    smooth-scroll: true
+    link-external-newwindow: true
+
+execute:
+  freeze: auto
+  echo: false
+  warning: false
+  message: false
+
+crossref:
+  tbl-title: "Táblázat"

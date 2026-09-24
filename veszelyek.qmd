@@ -1,0 +1,382 @@
+---
+title: "Kik figyelmeztettek az MI veszélyeire?"
+subtitle: "Idővonal a kezdetektől napjainkig"
+---
+
+A mesterséges intelligencia veszélyeivel kapcsolatos figyelmeztetések jóval
+régebbiek magánál a „mesterséges intelligencia" kifejezésnél (amelyet 1955–56-ban,
+a dartmouthi nyári kutatási program kapcsán vezettek be). Az alábbi idővonal a
+legfontosabb szereplőket és írásokat mutatja be, korszakokra bontva.
+A <span style="color:#c8102e">**piros-zöld**</span> jelölésű pontok magyar vonatkozásúak.
+
+::: {.callout-tip}
+## Két nagy hagyomány
+A figyelmeztetések nagyjából két irányba rendeződnek:
+
+1. **Hosszú távú, „kontroll"-kockázatok** – az emberinél okosabb rendszerek
+   irányíthatatlanná válhatnak (Turing, Good, Vinge, Bostrom, Yudkowsky, Russell,
+   Hinton, Bengio).
+2. **Jelenlegi társadalmi ártalmak** – elfogultság, diszkrimináció, átláthatatlan
+   döntések, munkaerőpiaci és környezeti hatások, dezinformáció (Weizenbaum,
+   O'Neil, Buolamwini, Gebru, Bender).
+
+A két irány ma egyre inkább kiegészíti egymást: a nemzetközi jelentések mindkettőt
+tárgyalják.
+:::
+
+## Előfutárok (1863–1949)
+
+::: {.idovonal}
+
+::: {.esemeny}
+[1863]{.ev} **Samuel Butler** – *Darwin among the Machines* [irodalom]{.cimke}
+
+Az új-zélandi *The Press* című lapban megjelent levelében Butler azt fejtegeti,
+hogy a gépek a darwini evolúcióhoz hasonlóan fejlődhetnek, és egyszer az ember
+fölé kerekedhetnek. Gondolatait később az *Erewhon* (1872) című regényében
+bontotta ki.
+:::
+
+::: {.esemeny .magyar}
+[1916]{.ev} **Karinthy Frigyes** – *Utazás Faremidóba* [irodalom]{.cimke}
+
+Karinthy Gulliver-folytatásában a hős gépszerű, szervetlen lények társadalmába
+jut, akik az emberi, „szerves" létet tökéletlennek, betegségszerűnek tartják.
+A magyar irodalom egyik legkorábbi víziója a gépi értelem és az ember
+viszonyáról.
+:::
+
+::: {.esemeny}
+[1920]{.ev} **Karel Čapek** – *R.U.R. (Rossum's Universal Robots)* [irodalom]{.cimke}
+
+A dráma adta a világnak a „robot" szót. A mesterségesen előállított munkások
+fellázadnak és elpusztítják az emberiséget – ez lett a „gépek lázadása" motívum
+ősforrása.
+:::
+
+::: {.esemeny}
+[1942]{.ev} **Isaac Asimov** – *Runaround* és a robotika három törvénye [irodalom]{.cimke}
+
+Asimov novelláiban a robotok viselkedését szabályokkal próbálja biztonságossá
+tenni – történetei azonban éppen azt mutatják meg, hogy az egyszerű szabályok
+váratlan, ellentmondásos helyzetekhez vezetnek. Ez a mai „értékillesztési"
+(alignment) probléma irodalmi előképe.
+:::
+
+:::
+
+## Az informatika atyái (1950–1969)
+
+::: {.idovonal}
+
+::: {.esemeny}
+[1950]{.ev} **Norbert Wiener** – *The Human Use of Human Beings* [tudomány]{.cimke}
+
+A kibernetika megalapítója a munkahelyek automatizálásának társadalmi
+következményeire és a gépekre ruházott döntések felelősségére figyelmeztetett.
+:::
+
+::: {.esemeny}
+[1951]{.ev} **Alan Turing** – *Intelligent Machinery, A Heretical Theory* [tudomány]{.cimke}
+
+Rádiós előadásában Turing azt mondta: ha a gépi gondolkodás egyszer beindul,
+valószínűleg nem tart sokáig, hogy túlszárnyalja „gyenge képességeinket", és
+*„egy ponton számítanunk kell arra, hogy a gépek átveszik az irányítást"* –
+kifejezetten Butler *Erewhon*jára hivatkozva.
+:::
+
+::: {.esemeny .magyar}
+[1955]{.ev} **Neumann János** – *Can We Survive Technology?* [tudomány]{.cimke}
+
+A *Fortune* magazinban megjelent esszéjében Neumann arról írt, hogy a
+technológiai fejlődés gyorsulása és globális hatásai (az atomenergiától az
+időjárás befolyásolásáig) olyan válságot idézhetnek elő, amelyre a meglévő
+politikai és társadalmi intézmények nem készültek fel. Stanisław Ulam 1958-as
+visszaemlékezése szerint Neumann egy beszélgetésben a technológiai haladás
+gyorsulását egy olyan „lényegi szingularitáshoz" közelítő folyamatként írta le,
+amelyen túl az emberi ügyek a megszokott módon nem folytatódhatnak – ez a
+„technológiai szingularitás" fogalmának első ismert megfogalmazása.
+:::
+
+::: {.esemeny}
+[1960]{.ev} **Norbert Wiener** – *Some Moral and Technical Consequences of Automation* (*Science*) [tudomány]{.cimke}
+
+Wiener klasszikus figyelmeztetése: ha olyan gépet használunk céljaink elérésére,
+amelynek működésébe nem tudunk hatékonyan beavatkozni, *„jobb, ha egészen
+biztosak vagyunk abban, hogy a gépbe táplált cél valóban az, amit akarunk"*.
+Ez az értékillesztési probléma első pontos megfogalmazása.
+:::
+
+::: {.esemeny}
+[1965]{.ev} **I. J. Good** – *Speculations Concerning the First Ultraintelligent Machine* [tudomány]{.cimke}
+
+Good, Turing egykori munkatársa leírta az „intelligenciarobbanás" gondolatát:
+egy ultraintelligens gép még jobb gépeket tervezhetne, így *„az első
+ultraintelligens gép az utolsó találmány, amelyet az embernek meg kell alkotnia
+– feltéve, hogy a gép elég engedelmes ahhoz, hogy elmondja, hogyan tartsuk
+ellenőrzés alatt"*.
+:::
+
+:::
+
+## Kritikusok és látnokok (1970–1999)
+
+::: {.idovonal}
+
+::: {.esemeny}
+[1976]{.ev} **Joseph Weizenbaum** – *Computer Power and Human Reason* [etika]{.cimke}
+
+Az ELIZA (1966) csevegőprogram alkotója megdöbbent azon, milyen könnyen
+tulajdonítanak az emberek megértést egy egyszerű programnak („ELIZA-hatás").
+Könyvében amellett érvelt, hogy bizonyos – ítélőképességet, együttérzést igénylő
+– döntéseket akkor sem szabad gépekre bízni, ha technikailag lehetséges.
+:::
+
+::: {.esemeny}
+[1993]{.ev} **Vernor Vinge** – *The Coming Technological Singularity* [tudomány]{.cimke}
+
+A NASA egyik szimpóziumán elhangzott esszé szerint harminc éven belül
+rendelkezésre állhatnak az emberinél nagyobb intelligencia létrehozásának
+eszközei, és *„nem sokkal ezután az emberi korszak véget ér"*.
+:::
+
+:::
+
+## Az MI-biztonság mint kutatási terület (2000–2016)
+
+::: {.idovonal}
+
+::: {.esemeny}
+[2000]{.ev} **Bill Joy** – *Why the Future Doesn't Need Us* (*Wired*) [technológia]{.cimke}
+
+A Sun Microsystems társalapítója a robotika, a géntechnológia és a
+nanotechnológia együttes kockázataira figyelmeztetett, és egyes kutatási irányok
+önkéntes korlátozását javasolta.
+:::
+
+::: {.esemeny}
+[2000]{.ev} **Eliezer Yudkowsky** – a Singularity Institute (2013-tól MIRI) megalapítása [kutatás]{.cimke}
+
+Az egyik első szervezet, amely kifejezetten a „barátságos MI" és az
+emberinél okosabb rendszerek irányíthatóságának kutatására jött létre.
+:::
+
+::: {.esemeny}
+[2005]{.ev} **Nick Bostrom** – Future of Humanity Institute (Oxford) [kutatás]{.cimke}
+
+Az Oxfordi Egyetemen működő intézet (2005–2024) az egzisztenciális
+kockázatok, köztük az MI kockázatainak akadémiai kutatását intézményesítette.
+:::
+
+::: {.esemeny}
+[2008]{.ev} **Steve Omohundro** – *The Basic AI Drives* [tudomány]{.cimke}
+
+Omohundro megmutatta, hogy szinte bármilyen célt követő, elég fejlett rendszer
+„magától" is törekedhet önmaga fenntartására, erőforrások szerzésére és céljai
+megőrzésére – ezek az ún. instrumentális célok.
+:::
+
+::: {.esemeny}
+[2014]{.ev} **Nick Bostrom** – *Superintelligence: Paths, Dangers, Strategies* [tudomány]{.cimke}
+
+A könyv rendszerezte a szuperintelligencia kockázatait (irányítási probléma,
+ortogonalitási tézis, instrumentális konvergencia), és széles közönséghez
+juttatta el a témát.
+:::
+
+::: {.esemeny}
+[2014]{.ev} **Stephen Hawking** és **Elon Musk** nyilatkozatai [közélet]{.cimke}
+
+Hawking a BBC-nek adott interjújában kijelentette: *„a teljes mesterséges
+intelligencia kifejlesztése az emberi faj végét jelentheti"*. Musk ugyanebben
+az évben a „démon megidézéséhez" hasonlította az MI-fejlesztést.
+:::
+
+::: {.esemeny}
+[2015]{.ev} **Future of Life Institute** – nyílt levelek [nyílt levél]{.cimke}
+
+Januárban a *Research Priorities for Robust and Beneficial AI* levél, júliusban
+pedig az autonóm fegyverek betiltását sürgető levél kapott több ezer kutatói
+aláírást (köztük Hawking, Russell, Musk és Wozniak aláírását).
+:::
+
+::: {.esemeny}
+[2016]{.ev} **Amodei, Olah, Steinhardt, Christiano, Schulman és Mané** – *Concrete Problems in AI Safety* [tudomány]{.cimke}
+
+A tanulmány gyakorlati, gépi tanulási problémákként fogalmazta meg a biztonsági
+kérdéseket (nem kívánt mellékhatások, „jutalom-hekkelés", biztonságos
+felfedezés, eloszláseltolódás), és ezzel az MI-biztonságot a fő kutatási
+áramlatba emelte.
+:::
+
+::: {.esemeny}
+[2016]{.ev} **Cathy O'Neil** – *Weapons of Math Destruction*; **ProPublica** – *Machine Bias* [etika]{.cimke}
+
+O'Neil könyve a tömegesen alkalmazott, átláthatatlan algoritmusok
+társadalmi igazságtalanságait mutatta be. A ProPublica oknyomozó cikke a
+COMPAS visszaesési kockázatbecslő rendszer faji torzításait tárta fel.
+:::
+
+:::
+
+## Etikai elvek és társadalmi kritika (2017–2021)
+
+::: {.idovonal}
+
+::: {.esemeny}
+[2017]{.ev} **Asilomari MI-elvek** [nyílt levél]{.cimke}
+
+A Future of Life Institute konferenciáján 23 elvet fogadtak el a
+kutatásról, az etikáról és a hosszú távú kockázatokról; több ezer kutató írta alá.
+:::
+
+::: {.esemeny}
+[2018]{.ev} **Joy Buolamwini** és **Timnit Gebru** – *Gender Shades* [etika]{.cimke}
+
+Kimutatták, hogy a kereskedelmi arcfelismerő rendszerek a sötétebb bőrű nőket
+jóval nagyobb hibaaránnyal osztályozzák, mint a világos bőrű férfiakat.
+:::
+
+::: {.esemeny}
+[2019]{.ev} **Stuart Russell** – *Human Compatible* [tudomány]{.cimke}
+
+A legelterjedtebb MI-tankönyv társszerzője szerint a rögzített célokat
+optimalizáló gépek alapvetően veszélyesek; olyan rendszerekre van szükség,
+amelyek bizonytalanok az emberi preferenciákat illetően. Ugyanebben az évben
+fogadták el az **OECD MI-elveit** is.
+:::
+
+::: {.esemeny}
+[2021]{.ev} **Bender, Gebru, McMillan-Major és Mitchell** – *On the Dangers of Stochastic Parrots* [etika]{.cimke}
+
+A nagy nyelvi modellek környezeti költségeire, a tanítóadatokban rejlő
+torzításokra és a megértés illúziójára figyelmeztető tanulmány. Novemberben az
+**UNESCO** elfogadta a mesterséges intelligencia etikájáról szóló ajánlását.
+:::
+
+:::
+
+## A generatív MI korszaka (2022–napjainkig)
+
+::: {.idovonal}
+
+::: {.esemeny}
+[2023. március]{.ev} **Future of Life Institute** – *Pause Giant AI Experiments* [nyílt levél]{.cimke}
+
+A ChatGPT megjelenése után a levél legalább hat hónapos szünetet sürgetett a
+GPT-4-nél erősebb rendszerek tanításában. Több tízezren írták alá, köztük
+Yoshua Bengio, Stuart Russell, Elon Musk és Steve Wozniak.
+:::
+
+::: {.esemeny}
+[2023. május]{.ev} **Geoffrey Hinton** távozása a Google-tól [közélet]{.cimke}
+
+A mélytanulás egyik atyja azért hagyta ott a Google-t, hogy szabadon
+beszélhessen az MI kockázatairól – a dezinformációtól a munkahelyek
+megszűnésén át az irányítás elvesztéséig.
+:::
+
+::: {.esemeny}
+[2023. május]{.ev} **Center for AI Safety** – *Statement on AI Risk* [nyílt levél]{.cimke}
+
+Egymondatos nyilatkozat: *„Az MI okozta kihalás kockázatának mérséklése
+globális prioritás kell legyen, más társadalmi léptékű kockázatok – például a
+járványok és a nukleáris háború – mellett."* Aláírói között van Hinton, Bengio
+és a vezető MI-cégek vezetői is.
+:::
+
+::: {.esemeny}
+[2023. november]{.ev} **Bletchley-nyilatkozat** [kormányzás]{.cimke}
+
+Az első MI-biztonsági csúcstalálkozón (Egyesült Királyság) 28 ország és az
+Európai Unió közösen ismerte el a legfejlettebb MI-rendszerek súlyos
+kockázatait. A folytatás Szöulban (2024), Párizsban (2025) és Újdelhiben (2026)
+volt.
+:::
+
+::: {.esemeny .magyar}
+[2024. augusztus]{.ev} **Az Európai Unió MI-rendelete (AI Act)** hatályba lép [kormányzás]{.cimke}
+
+A világ első átfogó, kockázatalapú MI-szabályozása – amely Magyarországon is
+közvetlenül alkalmazandó – megtiltja az elfogadhatatlan kockázatú
+alkalmazásokat, és szigorú követelményeket ír elő a magas kockázatú
+rendszerekre. Rendelkezései fokozatosan lépnek alkalmazásba.
+:::
+
+::: {.esemeny}
+[2024. október]{.ev} **Geoffrey Hinton** Nobel-díja [tudomány]{.cimke}
+
+John Hopfielddel megosztott fizikai Nobel-díját követően Hinton a díjátadó
+eseményeken is az MI-ből fakadó rövid és hosszú távú veszélyekre hívta fel a
+figyelmet.
+:::
+
+::: {.esemeny}
+[2025. január]{.ev} **International AI Safety Report** (Yoshua Bengio vezetésével) [jelentés]{.cimke}
+
+Az első nemzetközi tudományos jelentés az általános célú MI képességeiről és
+kockázatairól, amelyet a Bletchley-csúcson részt vevő országok felkérésére
+közel száz szakértő készített.
+:::
+
+::: {.esemeny}
+[2025. szeptember]{.ev} **Eliezer Yudkowsky** és **Nate Soares** – *If Anyone Builds It, Everyone Dies* [tudomány]{.cimke}
+
+A könyv a legélesebb formában fogalmazza meg a szuperintelligencia
+egzisztenciális kockázatát, és a fejlesztés nemzetközi leállítását sürgeti.
+:::
+
+::: {.esemeny}
+[2025. október]{.ev} **Statement on Superintelligence** [nyílt levél]{.cimke}
+
+A Future of Life Institute kezdeményezése a szuperintelligencia
+fejlesztésének tilalmát kéri mindaddig, amíg nincs széles tudományos
+konszenzus a biztonságos és ellenőrizhető megvalósításról, és erős társadalmi
+támogatás. Aláírói között van Geoffrey Hinton és Yoshua Bengio is.
+:::
+
+::: {.esemeny}
+[2026. február]{.ev} **International AI Safety Report 2026** [jelentés]{.cimke}
+
+A jelentés második kiadása több mint száz szakértő és harmincnál több ország,
+illetve nemzetközi szervezet részvételével készült; kiemelten foglalkozik a
+visszaélésekkel (kiber- és biológiai kockázatok, manipuláció), a rendszerszintű
+hatásokkal (munkaerőpiac, emberi autonómia) és az irányítás elvesztésének
+kockázatával.
+:::
+
+:::
+
+## Összefoglaló: a veszélyek fő típusai
+
+| Veszélytípus | Példák | Jellemző figyelmeztetők |
+|---|---|---|
+| Irányítás elvesztése, egzisztenciális kockázat | emberinél okosabb, rosszul illesztett célú rendszerek | Turing, Good, Vinge, Bostrom, Yudkowsky, Russell, Hinton, Bengio |
+| Értékillesztési (alignment) probléma | a gép „betű szerint" teljesíti a célt | Wiener, Asimov (irodalmi formában), Omohundro, Amodei és mtsai. |
+| Torzítás, diszkrimináció | igazságszolgáltatás, arcfelismerés, hitelbírálat | O'Neil, Buolamwini, Gebru, ProPublica |
+| Emberi ítélőképesség kiszorulása | döntések gépekre ruházása, ELIZA-hatás | Weizenbaum, Wiener |
+| Munkaerőpiaci és társadalmi átalakulás | automatizálás, egyenlőtlenségek | Wiener, Neumann, Hinton |
+| Dezinformáció és manipuláció | deepfake, tömeges szöveggenerálás | Bender és mtsai., Hinton, International AI Safety Report |
+| Katonai alkalmazás | autonóm fegyverek | FLI 2015-ös nyílt levele, Russell |
+
+## Források és további olvasnivaló
+
+- Butler, S. (1863). Darwin among the Machines. *The Press*, Christchurch.
+- Turing, A. M. (1951). *Intelligent Machinery, A Heretical Theory*. (Megjelent: *Philosophia Mathematica*, 1996, 4(3), 256–260.)
+- von Neumann, J. (1955). Can We Survive Technology? *Fortune*, 1955. június.
+- Ulam, S. (1958). John von Neumann 1903–1957. *Bulletin of the American Mathematical Society*, 64(3), 1–49.
+- Wiener, N. (1960). [Some Moral and Technical Consequences of Automation](https://doi.org/10.1126/science.131.3410.1355). *Science*, 131(3410), 1355–1358.
+- Good, I. J. (1965). Speculations Concerning the First Ultraintelligent Machine. *Advances in Computers*, 6, 31–88.
+- Weizenbaum, J. (1976). *Computer Power and Human Reason*. W. H. Freeman.
+- Vinge, V. (1993). [The Coming Technological Singularity](https://edoras.sdsu.edu/~vinge/misc/singularity.html).
+- Joy, B. (2000). [Why the Future Doesn't Need Us](https://www.wired.com/2000/04/joy-2/). *Wired*.
+- Omohundro, S. (2008). The Basic AI Drives. *Proceedings of AGI 2008*.
+- Bostrom, N. (2014). *Superintelligence: Paths, Dangers, Strategies*. Oxford University Press.
+- Amodei, D. és mtsai. (2016). [Concrete Problems in AI Safety](https://arxiv.org/abs/1606.06565). arXiv:1606.06565.
+- Buolamwini, J. és Gebru, T. (2018). [Gender Shades](https://proceedings.mlr.press/v81/buolamwini18a.html). *PMLR* 81.
+- Russell, S. (2019). *Human Compatible*. Viking.
+- Bender, E. M. és mtsai. (2021). [On the Dangers of Stochastic Parrots](https://doi.org/10.1145/3442188.3445922). *FAccT '21*.
+- Future of Life Institute (2023). [Pause Giant AI Experiments: An Open Letter](https://futureoflife.org/open-letter/pause-giant-ai-experiments/).
+- Center for AI Safety (2023). [Statement on AI Risk](https://www.safe.ai/work/statement-on-ai-risk).
+- Európai Unió (2024). [Az (EU) 2024/1689 rendelet (MI-rendelet)](https://eur-lex.europa.eu/eli/reg/2024/1689/oj?locale=hu).
+- Bengio, Y. és mtsai. (2025, 2026). [International AI Safety Report](https://internationalaisafetyreport.org/).
